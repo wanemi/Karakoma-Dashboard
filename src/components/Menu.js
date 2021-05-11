@@ -1,5 +1,6 @@
 import React from 'react';
 import '../style.css';
+import Link from './Link';
 import { FaHome, FaWallet, FaMoneyBillAlt, FaPowerOff } from "react-icons/fa";
 import { FiSettings } from "react-icons/fi";
 import { AiOutlineMenu } from "react-icons/ai";
@@ -10,44 +11,46 @@ const Menu = () => {
     return (
         <div className="navbar">
             <div>
-             <a href="#" className="side-nav__link">
+             <Link href="/" className="side-nav__link">
                   <AiOutlineMenu className="icon-style" />
-                  <span><img src={logo} /></span>
-             </a>
+                  <span><img alt='' src={logo} /></span>
+             </Link>
           </div>  
 
           <ul className="side-nav">
-             <li className="side-nav__item side-nav__item--active">
-                  <a href="#" className="side-nav__link">
+             <li className="side-nav__item">
+                  <Link href="/" className="side-nav__link">
                       <FaHome className="icon-style" />
                       <span>overview</span>
-                 </a>
+                 </Link>
              </li>
              <li className="side-nav__item">
-                  <a href="#" className="side-nav__link">
-                      <FaWallet className="icon-style" />
-                      <span>Wallet</span>
-                 </a>
+                  <Link href="/expenses" className="side-nav__link">
+                       <FaWallet className="icon-style" />
+                       <span>Wallet</span>
+                    
+                      
+                 </Link>
              </li>
              <li className="side-nav__item">
-                  <a href="#" className="side-nav__link">
+                  <Link href="/bag" className="side-nav__link">
                       <FaMoneyBillAlt className="icon-style" />
                       <span>Pay Bills</span>
-                 </a>
+                 </Link>
              </li>
              <li className="side-nav__item">
-                  <a href="#" className="side-nav__link">
+                  <Link href="/" className="side-nav__link">
                       <FiSettings className="icon-style" />
                       <span>Settings</span>
-                 </a>
+                 </Link>
              </li>        
           </ul>
           <hr />
           <div className="space">
-             <a href="#" className="side-nav__link logout">
+             <Link href="/" className="side-nav__link logout">
                   <FaPowerOff className="icon-style" />
                   <span>Logout</span>
-             </a>
+             </Link>
           </div>       
        </div>
     );

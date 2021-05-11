@@ -1,27 +1,23 @@
 import React from 'react';
 import '../style.css';
-import Jashboard from './Jashboard';
-import ProgressBar from './ProgressBar';
-import Services from './Services';
-import Table from './Table';
+import Home from './Home';
+import Expenses from './Expenses';
+import Bag from './Bag';
+import Route from './Route';
+
 
 const Overview = () => {
     return (
         <div className="overview">
-          <div className="link">
-             <Jashboard />
-          </div>
-          <div className="link">
-             
-             <ProgressBar />
-             
-          </div>
-          <div className="link">
-             <Services />
-          </div>
-          <div className="link">
-              <Table />
-          </div>
+            <Route path="/">
+                <Home />
+            </Route>
+            <Route path="/expenses">
+                <Expenses />
+            </Route>
+            <Route path="/bag">
+                <Bag />
+            </Route>
         </div>
 
     );
